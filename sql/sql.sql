@@ -15,6 +15,8 @@ CREATE TABLE `test` (
 	`user_money` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '用户金额',
 	`frozen_money` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT '冻结金额',
 	`desc` varchar(255) NOT NULL COMMENT '描述',
+	
+	`mobile` varchar(20) NOT NULL DEFAULT '' COMMENT '联系手机',
 	`order_sn` varchar(50) DEFAULT NULL COMMENT '订单编号',
 	PRIMARY KEY (`id`),
 	KEY `user_id` (`user_id`)

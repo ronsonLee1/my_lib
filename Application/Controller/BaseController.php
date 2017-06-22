@@ -4,18 +4,6 @@ use Think\Controller;
 
 class CommonController extends Controller {
     
-    //静态变量保存全局实例
-    private static $_instance = null;
-    
-    //静态方法，单例统一访问入口
-    public static function getInstance() {
-        if (!self::$_instance instanceof self){
-            self::$_instance = new self();
-        }
-        return self::$_instance;
-    }
-
-    
     /**
      * Ajax方式返回数据到客户端  (thinPHP 内置)
      * @param mixed $data 要返回的数据
