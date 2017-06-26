@@ -131,27 +131,6 @@ class CommonModel extends Model {
 	public function mDate() {
 		return date ( 'Y-m-d H:i:s' );
 	}
-	
-	/**
-	 * 循环报数出列,获取最后一个人
-	 * @param 人数 $num
-	 * @param 报数 $n
-	 */
-    public function getLastOne($num, $n){
-       $arr = range(1,$num);
-       $i = 0;
-       while (count($arr) > 1){
-           foreach ($arr as $key=>$val){
-               $i++;
-               if ($i == $n){
-                   var_dump($arr);
-                   unset($arr[$key]);
-                   $i = 0;
-                   break;
-               }
-           }
-       }
-       return current($arr);
-    }
+
 }
 
