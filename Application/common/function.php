@@ -127,9 +127,19 @@ class CommonModel extends Model {
         return array_key_exists($field, $fields);
     }
     
-	// 获取当前时间
+	/**
+	 *  获取当前时间
+	 */
 	public function mDate() {
 		return date ( 'Y-m-d H:i:s' );
+	}
+	
+	/**
+	 * 手机号隐藏中间四位
+	 */
+	function hide_phone($str){
+	    $resstr=substr_replace($str,'****',3,4);
+	    return $resstr;
 	}
 	
 	/**
